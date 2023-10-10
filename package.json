@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node backend/server.js",
-    "serve": "nodemon backend/server.js"
+    "serve": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,10 @@
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.6.0"
+    "mongoose": "^7.6.0",
+    "react-bootstrap": "^2.9.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
