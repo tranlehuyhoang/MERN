@@ -9,6 +9,7 @@ const authUser = asyncHandler(async (req, res) => {
 
     if (user && (await user.matchPassword(password))) {
         generateToken(res, user._id);
+        console.log(req.cookies.jwt)
         res.json({
             _id: user._id,
             name: user.name,
@@ -18,6 +19,9 @@ const authUser = asyncHandler(async (req, res) => {
         res.status(401);
         throw new Error('Invalid email or password');
     }
+
+
+
 });
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body;
